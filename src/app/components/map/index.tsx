@@ -64,12 +64,13 @@ export default function MyMap() {
     <MapContainer
       center={[52.520008, 13.404954]}
       zoom={11}
-      scrollWheelZoom={true}
+      scrollWheelZoom={false}
       doubleClickZoom={true}
       markerZoomAnimation={true}
       zoomAnimation={true}
       zoomControl={true}
       className="h-[100vh] w-[100vw]"
+      
     >
       <Modal
         market={selectedMarket}
