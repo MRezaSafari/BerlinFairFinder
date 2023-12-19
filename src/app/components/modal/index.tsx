@@ -73,7 +73,7 @@ const Modal: FC<Props> = ({ visible, market, onClose }) => {
               </div>
               <div>
                 <strong>Email: </strong>
-                {market.email}
+                {market.email.replace("mailto:", "")}
               </div>
             </div>
             {/*footer*/}
@@ -82,7 +82,12 @@ const Modal: FC<Props> = ({ visible, market, onClose }) => {
                 <a
                   className="bg-emerald-400 !text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                   type="button"
-                  href={market.w3}
+                  href={
+                    market.w3.startsWith("http") ||
+                    market.w3.startsWith("https")
+                      ? market.w3
+                      : `https://${market.w3}`
+                  }
                   target="_blank"
                 >
                   Website
