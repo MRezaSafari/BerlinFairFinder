@@ -1,0 +1,10 @@
+<svg width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <!-- Pin Shape -->
+    <path fill="#D32F2F" d="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0,9.5c-1.38,0-2.5-1.12-2.5-2.5S10.62,6.5 12,6.5s2.5,1.12 2.5,2.5S13.38,11.5 12,11.5z"/>
+    <!-- Christmas Tree on top of the pin -->
+    <path fill="#388E3C" d="M12,1L9,5h2v2h2V5h2L12,1z"/>
+    <!-- Decorations on the Christmas Tree -->
+    <circle cx="12" cy="3" r="0.5" fill="#FFEB3B"/>
+    <circle cx="11" cy="4.5" r="0.5" fill="#FFEB3B"/>
+    <circle cx="13" cy="4.5" r="0.5" fill="#FFEB3B"/>
+</svg>
