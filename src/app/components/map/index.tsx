@@ -27,7 +27,7 @@ function LocationMarker() {
   useEffect(() => {
     map.locate().on("locationfound", function (e) {
       setPosition(e.latlng);
-      map.flyTo(e.latlng, 11);
+      map.flyTo(e.latlng, 14);
     });
   }, [map]);
 
