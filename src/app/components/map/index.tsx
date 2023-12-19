@@ -43,7 +43,7 @@ export default function MyMap() {
   const [showModal, setShowModal] = useState(false);
 
   const renderPins = () => {
-    return Markets.map((market ,idx) => {
+    return Markets.map((market, idx) => {
       if (market.lat === null || market.lng === null) return null;
       return (
         <Marker
@@ -71,12 +71,6 @@ export default function MyMap() {
       zoomControl={true}
       className="h-[100vh] w-[100vw]"
     >
-      <TileLayer
-        attribution='&copy; <a href="https://linkedin.com/in/rezaverse" target="_blank">Created by Lukas Safari</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {renderPins()}
-      <LocationMarker />
       <Modal
         market={selectedMarket}
         visible={showModal}
@@ -84,6 +78,12 @@ export default function MyMap() {
           setShowModal(false);
         }}
       />
+      <TileLayer
+        attribution='&copy; <a href="https://linkedin.com/in/rezaverse" target="_blank">Created by Lukas Safari</a>'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {renderPins()}
+      <LocationMarker />
     </MapContainer>
   );
 }

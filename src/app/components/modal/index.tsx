@@ -35,8 +35,8 @@ const Modal: FC<Props> = ({ visible, market, onClose }) => {
 
   return (
     <>
-      <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[99999] outline-none focus:outline-none">
-        <div className="relative w-auto my-6 mx-auto max-w-3xl min-w-[300px]">
+      <div className="justify-center items-center flex fixed inset-0 z-[99999] outline-none focus:outline-none">
+        <div className="relative w-auto my-6 mx-auto max-w-3xl min-w-[300px] z-[99999] overflow-y-scroll max-h-[80dvh]">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}
@@ -52,7 +52,7 @@ const Modal: FC<Props> = ({ visible, market, onClose }) => {
               </button>
             </div>
             {/*body*/}
-            <div className="relative p-6 flex-auto text-base leading-9">
+            <div className="relative p-6 flex-auto text-base leading-9 overflow-y-auto">
               <div className="mb-5">{market.bemerkungen}</div>
               <hr />
               <div className="mt-5">
@@ -104,7 +104,10 @@ const Modal: FC<Props> = ({ visible, market, onClose }) => {
           </div>
         </div>
       </div>
-      <div className="opacity-75 fixed inset-0 bg-black z-[99998]"></div>
+      <div
+        className="opacity-75 fixed inset-0 bg-black z-[99998]"
+        onClick={handleClose}
+      ></div>
     </>
   );
 };
